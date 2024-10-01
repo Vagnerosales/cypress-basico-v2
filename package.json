@@ -27,6 +27,6 @@
     "url": "https://github.com/wlsf82/cypress-basico-v2/issues"
   },
   "devDependencies": {
-    "cypress": "^13.6.4"
+    "cypress": "^9.5.1"
   }
 }
