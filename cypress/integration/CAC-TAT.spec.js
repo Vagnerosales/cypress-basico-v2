@@ -100,7 +100,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       .should('have.value', '')
      
     })
-    it.only('exibe mensagem de erro ao submeter o formulário sem preencher os campos obrigatório ', function() {
+    it('exibe mensagem de erro ao submeter o formulário sem preencher os campos obrigatório ', function() {
       cy.clock()
       cy.get('button[type="submit"]').click()
       cy.get('.error').should('be.visible')
@@ -108,14 +108,14 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       cy.get('.error').should('not.be.visible')
      
     })
-    it.only('envia formulário com sucesso usando um comando customizado ', function() {
-      cy.clock()
-      cy.fillMandatoryFieldsAndSubmit()
-      cy.get('.success').should('be.visible')
-      cy.tick(three_seconds_in_ms)
-      cy.get('.success').should('not.be.visible')
+   // it('envia formulário com sucesso usando um comando customizado ', function() {
+    //  cy.clock()
+    //  cy.fillMandatoryFieldsAndSubmit()
+    //  cy.get('.success').should('be.visible')
+    //  cy.tick(three_seconds_in_ms)
+    //  cy.get('.success').should('not.be.visible')
   
-    })
+   // })
   
     it('selecione um produto (youtube) por seu texto', function() {
       cy.get('#product')
