@@ -13,7 +13,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       cy.title().should('be.equal','Central de Atendimento ao Cliente TAT')
   
     })
-    it('preencher os campos obrigatórios e enviar o formulário', function() {
+    it.only(#'preencher os campos obrigatórios e enviar o formulário', function() {
       const longText = 'Teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, teste, '
   
       cy.clock()
@@ -108,14 +108,14 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       cy.get('.error').should('not.be.visible')
      
     })
-   // it('envia formulário com sucesso usando um comando customizado ', function() {
-    //  cy.clock()
-    //  cy.fillMandatoryFieldsAndSubmit()
-    //  cy.get('.success').should('be.visible')
-    //  cy.tick(three_seconds_in_ms)
-    //  cy.get('.success').should('not.be.visible')
+    it('envia formulário com sucesso usando um comando customizado ', function() {
+     // cy.clock()
+      cy.fillMandatoryFieldsAndSubmit()
+      cy.get('.success').should('be.visible')
+     // cy.tick(three_seconds_in_ms)
+     // cy.get('.success').should('not.be.visible')
   
-   // })
+    })
   
     it('selecione um produto (youtube) por seu texto', function() {
       cy.get('#product')
